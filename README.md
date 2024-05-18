@@ -1,5 +1,3 @@
 # Numerical Methods
 
 ## Hunter College
-
-
