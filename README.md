@@ -1,2 +1,5 @@
-# Hunter College
-## Numerical Methods
+# Numerical Methods
+
+## Hunter College
+
+
