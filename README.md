@@ -1,2 +1,2 @@
-#Hunter College
+# Hunter College
 ## Numerical Methods
