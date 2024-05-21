@@ -14,10 +14,10 @@ The late Professor John Loustau: "Don't worry. You'll be fine."
 
 ## References, Secondary
 additional references for skittish, n00b coders; refreshers for those who forgot to pack their linear algebra.
-* Bhargava, Aditya Y. <i>[Grokking Algorithms](https://www.manning.com/books/grokking-algorithms/)</i>, Manning, 2016.
 * Kiusalaas, Jaan (Penn State). <i>[Numerical Methods in Engineering with Python 3](https://ia902301.us.archive.org/2/items/c-36_20211010/C36.pdf)</i>, Cambridge University Press, 2013.
 * Kovalev, Leonid (Syracuse). <i>[Numerical Methods with Programming](https://drlvk.github.io/nm/frontmatter.html)</i>, github, 2021.
 * Kong, Qingkai, et al (Berkley). <i>[Python Numerical Methods](https://pythonnumericalmethods.studentorg.berkeley.edu/notebooks/Index.html)</i>, Elsevier, 2020.
+* Bhargava, Aditya Y. <i>[Grokking Algorithms](https://www.manning.com/books/grokking-algorithms/)</i>, Manning, 2016.
 * The Bright Side of Mathematics. <i>[Linear Algebra](https://www.youtube.com/watch?v=x2cYoSPGz3o&list=PLBh2i93oe2quLc5zaxD0WHzQTGrXMwAI6)</i>.
 * Various. <i>[YouTube](https://www.youtube.com/results?search_query=numerical++methods)</i>, as needed.
 
