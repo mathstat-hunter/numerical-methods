@@ -3,7 +3,7 @@
 
 
 ## Acknowledgments
-The late Professor John Loustau: "(Don't worry.) You'll be fine."
+The late Professor John Loustau: "Don't worry. You'll be fine."
 
 
 ## References, Primary
