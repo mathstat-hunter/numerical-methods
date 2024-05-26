@@ -22,9 +22,9 @@ additional references for skittish, n00b coders; refreshers for those who forgot
 * Various. <i>[YouTube](https://www.youtube.com/results?search_query=numerical++methods)</i>, as needed.
 
 ## References, Affiliated Extras
-* Various. <i>[CUNY Graduate Center: Harmonic Analysis & PDE Seminar](https://sites.google.com/view/cuny-hapde/home)</i>.
 * Various. <i>[Hunter Mathematics Colloquium](https://sites.google.com/view/huntercollegemathcolloquium/home)</i>.
 * Various. <i>[Hunter Statistics Seminar](http://www.craigmile.com/probstat/)</i>.
+* Various. <i>[CUNY Graduate Center: Harmonic Analysis & PDE Seminar](https://sites.google.com/view/cuny-hapde/home)</i>.
 
 ## References, Supplementary
 wrt special lectures: general research, future topics.
