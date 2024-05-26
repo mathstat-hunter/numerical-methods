@@ -23,7 +23,7 @@ additional references for skittish, n00b coders; refreshers for those who forgot
 
 ## References, Affiliated Extras
 * Various. <i>[CUNY Graduate Center: Harmonic Analysis & PDE Seminar](https://sites.google.com/view/cuny-hapde/home)</i>.
-* Various. <i>[Hunter Mathematics Colloquium](https://sites.google.com/view/huntercollegemathcolloquium/home)<i>.
+* Various. <i>[Hunter Mathematics Colloquium](https://sites.google.com/view/huntercollegemathcolloquium/home)</i>.
 * Various. <i>[Hunter Statistics Seminar](http://www.craigmile.com/probstat/)</i>.
 
 ## References, Supplementary
