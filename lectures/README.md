@@ -6,6 +6,10 @@ colab is the development environment chosen for this course and colab notebooks 
 
 t‭he computer lab that hosts numerical methods has inaccessible whiteboards; their usable space is‬ ‭quite far off the ground. lectures started as handwritten with code walk-throughs but evolved to latex‬ ‭layered between code in colab notebooks and then to colab-generated pdfs with proofs, derivations, examples‬ ‭blocked out for handwriting via ipad. (handwriting remains an excellent speed for student digestion.) that is the‬ ‭intent of the colab notebooks.‬
 
+### colab vs jupyter
+
+colab is the development environment but its notebooks display imperfectly here; <b>therefore, there are pdfs</b>.
+
 ## sources
 
 t‭he notebooks draw heavily from tim sauers <i>‬‭numerical analysis, 2nd edition</i>‬‭. lecture delivery itself always contains extra material, links, examples but middle and later notebooks are selected or reduced content‬ ‭from sauers book -- which had the basic flow desired for the class. early material and special lectures are‬ ‭sourced elsewhere and noted as such.‬
