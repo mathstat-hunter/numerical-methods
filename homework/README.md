@@ -1,5 +1,5 @@
 # example homeworks
 
-these are previously loved homeworks that live on as examples. code answers provided.
+these previously loved homeworks live on as examples. code answers provided.
 
 ksa, spring 2024.
