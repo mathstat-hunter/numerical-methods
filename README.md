@@ -29,5 +29,4 @@ additional references for skittish, n00b coders; refreshers for those who forgot
 
 ## References, Supplementary
 wrt special lectures: general research, future topics.
-* Various. <i>[Medium](https://medium.com/?tag=everything)</i>, 24/7!
 * Various. <i>[OCW.MIT](https://ocw.mit.edu/search/?q=numerical+methods)</i>, sometimes this is the whole day.
