@@ -8,7 +8,7 @@ t‭he computer lab that hosts numerical methods has inaccessible whiteboards; t
 
 ### colab vs jupyter
 
-colab is the development environment but its notebooks display imperfectly here; <b>therefore, there are pdfs</b>.
+colab is the development environment but its notebooks display imperfectly here; <b>however, updates have improved display quality so photogenic pdf files have been removed</b>.
 
 ## sources
 
