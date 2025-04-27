@@ -12,6 +12,7 @@ The late Professor John Loustau: "Don't worry. You'll be fine."
 
 ## References, Local
 * Martinez, Vincent (Hunter College). <i>Various Lectures</i>, Various Semesters.
+* Thompson, Robert S. <i>Math 747</i>, a later lecture set in Hilbert Space.
 * Loustau, John (Hunter College). <i>Math 685</i>, Various Semesters.
 
 ## References, Secondary
