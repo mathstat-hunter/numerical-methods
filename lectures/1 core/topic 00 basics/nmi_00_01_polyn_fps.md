@@ -1,3 +1,7 @@
+---
+title: "00.01: polynomials & floating point"
+layout: default
+---
 # 00.01 basics: polynomials & floating point
 
 <details>
