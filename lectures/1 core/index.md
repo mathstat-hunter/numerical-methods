@@ -1,0 +1,7 @@
+[home](https://mathstat-hunter.github.io/numerical-methods) : [lectures](https://mathstat-hunter.github.io/numerical-methods/lectures) : [1 core](https://mathstat-hunter.github.io/numerical-methods/lectures/1%20%core)
+- [topic 00 basics](https://mathstat-hunter.github.io/numerical-methods/lectures/1%20%core/topic%20%00%20%basics)
+- [topic 01 rootfinding](https://mathstat-hunter.github.io/numerical-methods/lectures/1%20%core/topic%20%01%20%rootfinding)
+- [topic 02 systems of equations](https://mathstat-hunter.github.io/numerical-methods/lectures/1%20%core/topic%20%02%20%systems%30%of%20%equations)
+- [topic 03 interpolation](https://mathstat-hunter.github.io/numerical-methods/lectures/1%20%core/topic%20%03%20%interpolation)
+- [topic 04 least squares](https://mathstat-hunter.github.io/numerical-methods/lectures/1%20%core/topic%20%04%20%least%20%squares)
+- [topic 05 differentiation, integration](https://mathstat-hunter.github.io/numerical-methods/lectures/1%20%core/topic%20%05%20%differentiation,%20%integration)
