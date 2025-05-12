@@ -56,7 +56,7 @@ numerical methods are the algorithms; <b>numerical analysis</b> is the study of 
 
 ### i) evaluation
 
-##### example 01
+<details><summary>example 01</summary><br/>
 
 consider $\enspace p(x) = a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0$.
 
@@ -78,6 +78,8 @@ wrt operations,
 
 - method 3, nested multiplication ([horners method](https://en.wikipedia.org/wiki/Horner%27s_method)):
   - $p(x) = (((a_4 \times x + a_3) \times x + a_2) \times x + a_1) \times x + a_0 \mapsto 8$ operations.
+
+</details>
 
 ## 2 binary notation
 
