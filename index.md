@@ -1,5 +1,5 @@
 # Numerical Methods
-## An Introduction & Then Some
+An Introduction & Then Some
 
 [LECTURES](lectures/)
 
