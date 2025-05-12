@@ -52,32 +52,32 @@ numerical methods are the algorithms; <b>numerical analysis</b> is the study of 
 
 ## 1 polynomials
 
-<i>The most fundamental operations of arithmetic are <b>addition</b> and <b>multiplication</b>. These are also the operations needed to evaluate a polynomial $p(x)$ at a particular value $x$. It is no coincidence that polynomials are the basic building blocks for many computational techniques we will construct.[^2]</i>
+<i>The most fundamental operations of arithmetic are <b>addition</b> and <b>multiplication</b>. These are also the operations needed to evaluate a polynomial `p(x)` at a particular value `x`. It is no coincidence that polynomials are the basic building blocks for many computational techniques we will construct.[^2]</i>
 
 ### i) evaluation
 
 <details><summary>example 01</summary><br/>
 
-consider $\enspace p(x) = a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0$.
+consider: `p(x) = a₄x⁴ + a₃x³ + a₂x² + a₁x + a₀`
 
 with computational considerations:
 
-1. <b>approximate</b> $p(x)$ at $x$ while
+1. <b>approximate</b> `p(x)` at `x` while
 2. minimizing <b>operations</b> and
 3. maximizing <b>accuracy</b>.
 
 wrt operations,
 
 - method 1, step individually:
-  - $p(x) = a_4 \times x \times x \times x \times x + a_3 \times x \times x \times x + a_2 \times x \times x + a_1 \times x + a_0 \mapsto 14$ operations.
+  - `p(x) = a₄·x·x·x·x + a₃·x·x·x + a₂·x·x + a₁·x + a₀ ↦ 14` operations.
 
 - method 2, cache and reuse:
-  - $x_2 = x \times x, x_3 = x_2 \times x, x_4 = x_3 \times x \mapsto 3$ operations;
-  - $p_4 = a_4 \times x_4, p_3 = a_3 \times x_3, p_2 = a_2 \times x_2, p_1 = a_1 \times x_1 \mapsto 4$ operations;
-  - $p(x) = p_4 + p_3 + p_2 + p_1 + a_0 \mapsto 4$ operations $\mapsto 11$ operations total.
+  - `x₂ = x·x, x₃ = x₂·x, x₄ = x₃·x ↦ 3` operations;
+  - `p₄ = a₄·x₄, p₃ = a₃·x₃, p₂ = a₂·x₂, p₁ = a₁·x₁ ↦ 4` operations;
+  - `p(x) = p₄ + p₃ + p₂ + p₁ + a₀ ↦ 4` operations `↦ 11` operations total.
 
 - method 3, nested multiplication ([horners method](https://en.wikipedia.org/wiki/Horner%27s_method)):
-  - $p(x) = (((a_4 \times x + a_3) \times x + a_2) \times x + a_1) \times x + a_0 \mapsto 8$ operations.
+  - `p(x) = (((a₄·x + a₃)·x + a₂)·x + a₁)·x + a₀ ↦ 8` operations.
 
 </details>
 
@@ -85,101 +85,138 @@ wrt operations,
 
 ### i) conversion to decimal
 
-$$
-\Rightarrow \enspace \dots b_2 \times 2^2 + b_1 \times 2^1 + b_0 \times 2^0 + b_{-1} \times 2^{-1} + b_{-2} \times 2^{-2} \dots
-$$
+`⇒ ... b₂·2² + b₁·2¹ + b₀·2⁰ + b₋₁·2⁻¹ + b₋₂·2⁻² ...`
 
 <details><summary>example 02</summary><br/>
 
-evaluate $111.11_2$.
+evaluate `111.11₂`.
 
-![example 02](_img/0001_x02.png)
+```
+   integer: 1·2² + 1·2¹ + 1·2⁰ = 4 + 2 + 1 = 7₁₀.
+fractional: 1·2⁻¹ + 1·2⁻² = ½ + ¼ = (¾)₁₀.
+
+    111.11₂ ⇒ 7₁₀ + (¾)₁₀ = 7.75₁₀.
+```
 
 </details>
 
 ### ii) conversion from decimal
 
-##### example 03
+<details><summary>example 03</summary><br/>
 
-evaluate $111.25_{10}$.
+evaluate `111.25₁₀`.
 
-$$
-\begin{array}{rrcl}
-  \text{integer:} & \tfrac{111}{2} &=& 55\, R\, 1 \\
-  \hookrightarrow & \tfrac{55}{2} &=& 27\, R\, 1 \\
-  \hookrightarrow & \tfrac{27}{2} &=& 13\, R\, 1 \\
-  \hookrightarrow & \tfrac{13}{2} &=& 6\, R\, 1 \\
-  \hookrightarrow & \tfrac{6}{2} &=& 3\, R\, 0 \\
-  \hookrightarrow & \tfrac{3}{2} &=& 1\, R\, 1 \\
-  \hookrightarrow & \tfrac{1}{2} &=& 0\, R\, 1 \\
-  && \Rightarrow & 1101111, \quad\text{remainders in reverse order}. \\
-  \\
-  \text{fractional:} & 0.25\times 2 &=& 0.50 + 0 \\
-  \hookrightarrow & 0.50\times 2 &=& 0.00 + 1 \\
-  && \Rightarrow & 0.01, \quad\text{integers in order from left to right}. \\
-  \\
-  \Rightarrow & 111.25_{10} &=& 1101111_2 + 0.01_2 = 1101111.01_2.
-\end{array}
-$$
+```
+   integer:  111·½ = 55 R 1
+              55·½ = 27 R 1
+              27·½ = 13 R 1
+              13·½ =  6 R 1
+               6·½ =  3 R 0
+               3·½ =  1 R 1
+               1·½ =  1 R 1
+             111₁₀ ⇒ 1101111₂, remainders in reverse order.
+
+fractional: 0.25·2 = 0.50 + 0
+            0.50·2 = 0.00 + 1
+            0.25₁₀ ⇒ 0.01₂,    integers in order from left to right.
+
+          111.25₁₀ ⇒ 1101111₂ + 0.01₂ = 1101111.01₂.
+```
+
+</details>
 
 ## 3 polynomials in the machine
 
 ### i) digital representation
 
-$$
-\begin{align}
-  x &= [d_{N-1},\dots,d_1,d_0] \quad\text{digital vector} \\
-  \\
-  &= d_{N-1} \times b^{N-1} + \dots + d_1 \times b^1 + d_0\times b^0 \quad\text{with}\textbf{ precision } N \text{ and}\textbf{ base } b.
-\end{align}
-$$
+```
+x = [dₙ₋₁,...,d₁,d₀]                  𝗱𝗶𝗴𝗶𝘁𝗮𝗹 𝘃𝗲𝗰𝘁𝗼𝗿
+  =  dₙ₋₁·bⁿ⁻¹ + ... + d₁·b¹ + d₀·b⁰  𝗽𝗿𝗲𝗰𝗶𝘀𝗶𝗼𝗻 𝗡 (n) and 𝗯𝗮𝘀𝗲 𝗯.
+```
 
-##### example 04
+<details><summary>example 04</summary><br/>
 
-- base 10: $\quad 500_{10} = [5,0,0]; \quad [5] = 5_{10}$.
-- base 02: $\quad [1,0,1] = 101_2 = 1\times 2^2 + 0\times 2^1 + 1\times 2^0 = 4 + 0 + 1 = 5_{10}$.
+- base 10: `500₁₀ = [5,0,0]; [5] = 5₁₀`.
+- base 02: `[1,0,1] = 101₂ = 1·2² + 0·2¹ + 1·2⁰ = 4 + 0 + 1 = 5₁₀`.
+
+</details>
 
 ### ii) fixed/positional representation
 
-##### example 04, continued
+<details><summary>example 04, continued</summary><br/>
 
-- base 02: $101_{\color{blue}{2}} = 1\times {\color{blue}{2}}^2 + 0\times {\color{blue}{2}}^1 + 1\times {\color{blue}{2}}^0$
+- base 02: `101`<mark>`₂`</mark>` = 1·`<mark>`2`</mark>`² + 0·`<mark>`2`</mark>`¹ + 1·`<mark>`2`</mark>`⁰`
 
-where RHS is <b>fixed representation</b> and LH subscript is the base or <b>radix</b> r.
+where RHS is <b>fixed representation</b> and LH subscript is the base or <b>radix</b> `r`.
 
-additionally, precision $N\ge 1, r\ge 2$ such that
+additionally, precision `N ≥ 1`, `r ≥ 2` such that
 
-$$
-x = \sum^N d_kr^k \enspace\text{has}\enspace r^N \enspace\textbf{permutations}
-$$
+`x = ∑ⁿ dₖrᵏ has rⁿ 𝗽𝗲𝗿𝗺𝘂𝘁𝗮𝘁𝗶𝗼𝗻𝘀`
 
 and can also be written as
 
-$r^N =$ <font color=blue>$(r-1)$</font> <b>$(r^{N-1})$</b> $+ \color{red}{(r^{N-1})} = \color{blue}{[r-1]_{N-1}}[r]_{N-2}\dots[r]_1[r]_0 + \color{red}{[r]_{-1}[r]_{-2}\dots [r]_{N-2}[r]_{N-1}}$
+`rⁿ = (r-1)·`<mark>`(rⁿ⁻¹)`</mark>` + (rⁿ⁻¹) = [r-1]ₙ₋₁·`<mark>`[r]ₙ₋₂ ... [r]₁[r]₀`</mark>` + [r]₋₁[r]₋₂ ... [r]ₙ₋₂[r]ₙ₋₁`
 
 where subscripts denote position wrt exponent.
 
-##### example 05
+</details>
 
-describe set where $N=3, r=2$.
+<details><summary>example 05</summary><br/>
 
-$$
-\begin{align}
-  \text{permutations:} &\quad r^N = 2^3 = 8 \\
-  &\qquad\,
-    = (r-1)\cdot r_1\cdot r_0 + r_{-1}\cdot r_{-2}
-    = (2-1)\cdot 2\cdot 2 + 2\cdot 2 = 4 + 4 = 8 \enspace\checkmark \\
-  \\
-  &\qquad\, \Rightarrow \{000,001,010,011,100,101,110,111 \}; \\
-  \\
-  \text{magnitude:}
-    &\quad
-      \sum^{N-1} d_kr^k \le \sum^{N-1} (r-1)r^k = r^N - 1
-      \Rightarrow \enspace\text{range}^* \enspace [0,r^N - 1] = [0,7]_{10}.
-\end{align}
-$$
+describe set where `N=3`, `r=2`.
 
-$^*$ note: "range of magnitude" of $x$ is also "range" of $x$ bc representation of $x$ does not allow for sign.
+```
+permutations: rⁿ = 2³ = 8
+                 = (r-1)·r₁·r₀ + r₋₁·r₋₂ = (2-1)·2·2 + 2·2 = 4 + 4 = 8 ✓
+
+                 = {000,001,010,011,100,101,110,111};
+
+   magnitude: ∑ⁿ⁻¹ dₖrᵏ ≤ ∑ⁿ⁻¹ (r-1)rᵏ = rⁿ - 1 ⇒ range* [0,rⁿ - 1] = [0,7]₁₀.
+```
+
+*note: "range of magnitude" of `x` is also "range" of `x` bc representation of this `x` does not allow for sign.
+
+</details>
+
+### iii) sign
+
+sign extends range.
+
+- method 1: use position `dₙ₋₁` for sign.
+
+```
+              x = [±]ₙ₋₁[dₙ₋₂,...,d₁,d₀] and
+
+permutations: rⁿ⁻¹·2;
+       range: [-rⁿ⁻¹ + 1,0],[0,+rⁿ⁻¹ - 1]*
+```
+
+*note: yes, thats `-0` and `+0`. fun, right?
+
+- method 2: use bias to obtain sign.
+
+ie, all positions used for magnitude and <i>bias is an operation</i>.
+
+```
+   permutations: rⁿ;
+unbiased, range: [xₘᵢₙ,xₘₐₓ] = [0,rⁿ - 1]
+  biased, range: [xₘᵢₙ,xₘₐₓ] - B = [-B,(rⁿ - 1) - B]
+```
+
+and <b>standard bias</b> `B = rⁿ⁻¹ - 1`.
+
+<details><summary>example 06</summary><br/>
+
+example 06 extends example 05 wrt standard bias.
+
+```
+       B = rⁿ⁻¹ - 1 = (2)⁽³⁻¹⁾ - 1 = 4 - 1 = 3 and
+range: [000,111]₂ ↦ [0,7]₁₀ − B = [−3,+4]₁₀.
+```
+
+</details>
+
+## floating-point
 
 ## resources
 
