@@ -110,26 +110,22 @@ $$
 evaluate $111.25_{10}$.
 
 $$
-\begin{align}
-  \text{integer:} &\qquad\; \tfrac{111}{2} = 55\, R\, 1 \\
-  &\quad\rightarrow \tfrac{55}{2} = 27\, R\, 1 \\
-  &\quad\rightarrow \tfrac{27}{2} = 13\, R\, 1 \\
-  &\quad\rightarrow \tfrac{13}{2} = 6\, R\, 1 \\
-  &\quad\rightarrow \;\tfrac{6}{2} = 3\, R\, 0 \\
-  &\quad\rightarrow \;\tfrac{3}{2} = 1\, R\, 1 \\
-  &\quad\rightarrow \;\tfrac{1}{2} = 0\, R\, 1 \\
+\begin{array}{rrcl}
+  \text{integer:} & \tfrac{111}{2} &=& 55\, R\, 1 \\
+  \hookrightarrow & \tfrac{55}{2} &=& 27\, R\, 1 \\
+  \hookrightarrow & \tfrac{27}{2} &=& 13\, R\, 1 \\
+  \hookrightarrow & \tfrac{13}{2} &=& 6\, R\, 1 \\
+  \hookrightarrow & \tfrac{6}{2} &=& 3\, R\, 0 \\
+  \hookrightarrow & \tfrac{3}{2} &=& 1\, R\, 1 \\
+  \hookrightarrow & \tfrac{1}{2} &=& 0\, R\, 1 \\
+  && \Rightarrow & 1101111, \quad\text{remainders in reverse order}. \\
   \\
-  &\quad\rightarrow 1101111, \enspace\text{remainders in reverse order}  \\
+  \text{fractional:} & 0.25\times 2 &=& 0.50 + 0 \\
+  \hookrightarrow & 0.50\times 2 &=& 0.00 + 1 \\
+  && \Rightarrow & 0.01, \quad\text{integers in order from left to right}. \\
   \\
-  \text{fractional:} &\qquad\enspace 0.25\times 2 = 0.50 + 0 \\
-  &\quad\rightarrow 0.50\times 2 = 0.00 + 1 \\
-  \\
-  &\quad\rightarrow 0.01, \enspace\text{integers in order from left to right} \\
-  \\
-  &\quad\Downarrow \\
-  \\
-  111.25_{10} &= 1101111_2 + 0.01_2 = 1101111.01_2.
-\end{align}
+  \Rightarrow & 111.25_{10} &=& 1101111_2 + 0.01_2 = 1101111.01_2.
+\end{array}
 $$
 
 ## 3 polynomials in the machine
@@ -144,7 +140,7 @@ $$
 \end{align}
 $$
 
-#####example 04
+##### example 04
 
 - base 10: $\quad 500_{10} = [5,0,0]; \quad [5] = 5_{10}$.
 - base 02: $\quad [1,0,1] = 101_2 = 1\times 2^2 + 0\times 2^1 + 1\times 2^0 = 4 + 0 + 1 = 5_{10}$.
@@ -160,15 +156,12 @@ where RHS is <b>fixed representation</b> and LH subscript is the base or <b>radi
 additionally, precision $N\ge 1, r\ge 2$ such that
 
 $$
-\begin{align}
-  x = &\enspace \sum^N d_kr^k \text{ has } r^N \textbf{ permutations}
-\end{align}
+x = \sum^N d_kr^k \enspace\text{has}\enspace r^N \enspace\textbf{permutations}
 $$
 
 and can also be written as
 
-$r^N = {\color{blue}{(r-1)}} ({\bf r^{N-1}}) + {\color{red}{(r^{N-1})}} =$
-${\color{blue}{[r-1]}{\color{blue}{_{N-1}}}$ $[r]_{N-2}\dots[r]_1[r]_0 + {\color{red}{[r]_{-1}[r]_{-2}\dots [r]_{N-2}[r]_{N-1}}}$
+$r^N =$ <font color=blue>$(r-1)$</font> <b>$(r^{N-1})$</b> $+ \color{red}{(r^{N-1})} = \color{blue}{[r-1]_{N-1}}[r]_{N-2}\dots[r]_1[r]_0 + \color{red}{[r]_{-1}[r]_{-2}\dots [r]_{N-2}[r]_{N-1}}$
 
 where subscripts denote position wrt exponent.
 
