@@ -89,21 +89,13 @@ $$
 \Rightarrow \enspace \dots b_2 \times 2^2 + b_1 \times 2^1 + b_0 \times 2^0 + b_{-1} \times 2^{-1} + b_{-2} \times 2^{-2} \dots
 $$
 
-##### example 02
+<details><summary>example 02</summary><br/>
 
 evaluate $111.11_2$.
 
-$$
-\begin{align}
-  \text{integer:} &\quad 1 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 4 + 2 + 1 = 7 \\
-  \\
-  \text{fractional:} &\quad 1 \times 2^{-1} + 1 \times 2^{-2} = \tfrac{1}{2} + \tfrac{1}{4} = \tfrac{3}{4} = 0.75 \\
-  \\
-  &\quad\Downarrow \\
-  \\
-  111.11_2 &= 7_{10} + 0.75_{10} = 7.75_{10}.
-\end{align}
-$$
+![example 02](_img/0001_x02.png)
+
+</details>
 
 ### ii) conversion from decimal
 
