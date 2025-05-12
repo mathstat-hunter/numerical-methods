@@ -1,10 +1,10 @@
 # Numerical Methods
 ## An Introduction & Then Some
 
+[LECTURES](lectures/)
+
 ## Acknowledgments
 The late Professor John Loustau: "Don't worry. You'll be fine."
-
-[LECTURES](lectures/)
 
 ## References, Primary
 * Sauer, Timothy (George Mason University). <i>[Numerical Analysis](https://www.pearson.com/en-gb/subject-catalog/p/numerical-analysis-pearson-new-international-edition/P200000005356/9781292036748)</i>, 2nd Edition, Pearson, 2013.
