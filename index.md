@@ -1,7 +1,7 @@
+[LECTURES](lectures/)
+
 # Numerical Methods
 An Introduction & Then Some
-
-[LECTURES](lectures/)
 
 ## Acknowledgments
 The late Professor John Loustau: "Don't worry. You'll be fine."
