@@ -56,9 +56,7 @@ numerical methods are the algorithms; <b>numerical analysis</b> is the study of 
 
 ### i) evaluation
 
-<details>
-
-<summary>example 01</summary><br/>
+##### example 01
 
 consider $\enspace p(x) = a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0$.
 
@@ -81,8 +79,6 @@ wrt operations,
 - method 3, nested multiplication ([horners method](https://en.wikipedia.org/wiki/Horner%27s_method)):
   - $p(x) = (((a_4 \times x + a_3) \times x + a_2) \times x + a_1) \times x + a_0 \mapsto 8$ operations.
 
-</details>
-
 ## 2 binary notation
 
 ### i) conversion to decimal
@@ -91,9 +87,7 @@ $$
 \Rightarrow \enspace \dots b_2 \times 2^2 + b_1 \times 2^1 + b_0 \times 2^0 + b_{-1} \times 2^{-1} + b_{-2} \times 2^{-2} \dots
 $$
 
-<details>
-
-<summary>example 02</summary><br/>
+##### example 02
 
 evaluate $111.11_2$.
 
@@ -101,21 +95,17 @@ $$
 \begin{align}
   \text{integer:} &\quad 1 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 4 + 2 + 1 = 7 \\
   \\
-  \text{fractional:} &\quad 1 \times 2^{-1} + 1 \times 2^{-2} = \tfrac{1}{2} + \tfrac{1}{4} = \tfrac{3}{4} \\
+  \text{fractional:} &\quad 1 \times 2^{-1} + 1 \times 2^{-2} = \tfrac{1}{2} + \tfrac{1}{4} = \tfrac{3}{4} = 0.75 \\
   \\
   &\quad\Downarrow \\
   \\
-  111.11_2 &= 7_{10} + (\tfrac{3}{4})_{10} = 7.75_{10}.
+  111.11_2 &= 7_{10} + 0.75_{10} = 7.75_{10}.
 \end{align}
 $$
 
-</details>
-
 ### ii) conversion from decimal
 
-<details>
-
-<summary>example 03</summary><br/>
+##### example 03
 
 evaluate $111.25_{10}$.
 
@@ -142,8 +132,6 @@ $$
 \end{align}
 $$
 
-</details>
-
 ## 3 polynomials in the machine
 
 ### i) digital representation
@@ -156,26 +144,18 @@ $$
 \end{align}
 $$
 
-<details>
-
-<summary>example 04</summary><br/>
+#####example 04
 
 - base 10: $\quad 500_{10} = [5,0,0]; \quad [5] = 5_{10}$.
 - base 02: $\quad [1,0,1] = 101_2 = 1\times 2^2 + 0\times 2^1 + 1\times 2^0 = 4 + 0 + 1 = 5_{10}$.
 
-</details>
-
 ### ii) fixed/positional representation
 
-<details>
+##### example 04, continued
 
-<summary>example 04, continued</summary><br/>
-
-- base 02: $101_\color{blue}{2} = 1\times \color{blue}{2}^2 + 0\times \color{blue}{2}^1 + 1\times \color{blue}{2}^0$
+- base 02: $101_{\color{blue}{2}} = 1\times {\color{blue}{2}}^2 + 0\times {\color{blue}{2}}^1 + 1\times {\color{blue}{2}}^0$
 
 where RHS is <b>fixed representation</b> and LH subscript is the base or <b>radix</b> r.
-
-</details>
 
 additionally, precision $N\ge 1, r\ge 2$ such that
 
@@ -187,11 +167,32 @@ $$
 
 and can also be written as
 
-$$
-r^N = \color{blue}{(r-1)}({\bf r^{N-1}}) + \color{red}{(r^{N-1})} = \color{blue}{[r-1]_{N-1}}[r]_{N-2}\dots[r]_1[r]_0 + \color{red}{[r]_{-1}[r]_{-2}\dots [r]_{N-2}[r]_{N-1}}
-$$
+$r^N = {\color{blue}{(r-1)}} ({\bf r^{N-1}}) + {\color{red}{(r^{N-1})}} =$
+${\color{blue}{[r-1]}{\color{blue}{_{N-1}}}$ $[r]_{N-2}\dots[r]_1[r]_0 + {\color{red}{[r]_{-1}[r]_{-2}\dots [r]_{N-2}[r]_{N-1}}}$
 
 where subscripts denote position wrt exponent.
+
+##### example 05
+
+describe set where $N=3, r=2$.
+
+$$
+\begin{align}
+  \text{permutations:} &\quad r^N = 2^3 = 8 \\
+  &\qquad\,
+    = (r-1)\cdot r_1\cdot r_0 + r_{-1}\cdot r_{-2}
+    = (2-1)\cdot 2\cdot 2 + 2\cdot 2 = 4 + 4 = 8 \enspace\checkmark \\
+  \\
+  &\qquad\, \Rightarrow \{000,001,010,011,100,101,110,111 \}; \\
+  \\
+  \text{magnitude:}
+    &\quad
+      \sum^{N-1} d_kr^k \le \sum^{N-1} (r-1)r^k = r^N - 1
+      \Rightarrow \enspace\text{range}^* \enspace [0,r^N - 1] = [0,7]_{10}.
+\end{align}
+$$
+
+$^*$ note: "range of magnitude" of $x$ is also "range" of $x$ bc representation of $x$ does not allow for sign.
 
 ## resources
 
