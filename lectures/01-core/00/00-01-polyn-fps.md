@@ -218,6 +218,40 @@ range: [000,111]₂ ↦ [0,7]₁₀ − B = [−3,+4]₁₀.
 
 ## floating-point
 
+there is some `x ∈ 𝔽ℙ`. also / remember `𝔽ℙ ⊂ ℝ`.
+
+`x=M·bᴱ` , where <b>mantissa</b> `M` is an integer represented by sign, magnitude, radix and <b>precision</b> `m`; <b>exponent</b> `E` is an integer represented by bias and same radix. also, `M` is <b>normalized</b> as `1.F`, where `"1."` is implicit and <b>fractional</b> `F` is
+
+'F = ∑ᵐ⁻² dₖrᵏ, r ≥ 2 ⇒ x = ± 1.F × bᴱ`.
+
+ie, same `r` for `M`,`E`; `m` includes sign; `mᴱ = N − m`; `B = rⁿ⁻¹ − 1` with bias power `N − 1 = mᴱ − 1`. note: `b` is the base of the exponent and not the base of the exponents power.
+
+![x=±1.F×bᴱ](_img/0001_401.png)
+
+<details><summary>example 07</summary><br/>
+
+![example 07](_img/0001_x07.png)
+![example 07, answer](_img/0001_x07a.png)
+
+</details>
+
+<details><summary>example 08</summary><br/>
+
+![example 08](_img/0001_x08.png)
+![example 08, answer](_img/0001_x08a.png)
+
+</details>
+
+### i) denormalized vs normalized
+
+### ii) IEEE 754
+
+### iii) hexadecimal vs binary
+
+### iv) computer science vs engeineering
+
+### v) observations
+
 ## resources
 
 - horners method [@wiki](https://en.wikipedia.org/wiki/Horner%27s_method)
