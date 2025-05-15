@@ -227,17 +227,19 @@ there is some `x ∈ 𝔽ℙ`. also / remember `𝔽ℙ ⊂ ℝ`.
 ie, same `r` for `M`,`E`; `m` includes sign; `mᴱ = N − m`; `B = rⁿ⁻¹ − 1` with bias power `N − 1 = mᴱ − 1`. note: `b` is the base of the exponent and not the base of the exponents power.
 
 ```
-                             positions allocated      
+                             positions  allocated      
                         |----------------------------|
                          mₑ = N - m      mₘ = m - sign
                         |-----------|    |-----------|
                                                       
     x = ±1.F × bᴱ = [s] [...][e₁][e₀] 1. [f₁][f₂][...]
+
+                        |-----------|    |-----------|
+                    ... + e₁r¹ + eₒr⁰    f₁r⁻¹ + f₂r⁻² + ...
 ```
-
-![x=±1.F×bᴱ](_img/0001_401.png)
-
 <details><summary>example 07</summary><br/>
+
+given FP(N=5,m=3,r=3,b=2)  with standard bias, what is the value represented by [0,1,1,2,0]FP(5,3,3,2)?
 
 [![x7-que](_img/0001_x07.png)]()
 [![x7-ans](_img/0001_x07a.png)]()
