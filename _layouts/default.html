@@ -15,6 +15,7 @@
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        packages: {'[+]': ['color', 'boldsymbol']},
         processEscapes: true,
         processEnvironments: true
       },
@@ -30,7 +31,8 @@
     };
     </script>
     <!-- Load MathJax -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js" id="MathJax-script"></script>
 </head>
 <body>
     <div class="container-lg px-3 my-5 markdown-body">
